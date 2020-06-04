@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        淘宝收藏夹快速删除
-// @namespace   http://www.mozl.net 
+// @namespace   mozl.net 
 // @match       https://shoucang.taobao.com/item_collect*.htm*
 // @grant       none
 // @run-at      document-end
