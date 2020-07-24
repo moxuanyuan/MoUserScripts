@@ -51,7 +51,7 @@
         },
         {
             // 下厨房 - 移动端页面
-            regs:  ],
+            regs:  [/^http(s)?:\/\/(\w+\.)?m.xiachufang\.com(\/\w+)?(\/)?/i],
             remove:[]
         }
 
