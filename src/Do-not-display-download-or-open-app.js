@@ -2,12 +2,13 @@
 // @name        Do not show download or open app
 // @namespace   mozl.net
 // @grant       GM_addStyle
-// @version     0.3.1
+// @version     0.3.2
 // @author      Mozl
 // @description 移动版网页不显示下载或打开APP
 // @match       *://juejin.im/*
 // @match       *://*.toutiao.io/*
 // @match       *://*.m.smzdm.com/*
+// @match       *://m.xiachufang.com/*
 // ==/UserScript==
 /*jshint esversion: 6 */
 (function () {
@@ -47,7 +48,13 @@
             remove:[
                 '.footer-banner','.foot-banner > .download-normal','.download-mini.J_ota'
             ]
+        },
+        {
+            // 下厨房 - 移动端页面
+            regs:  ],
+            remove:[]
         }
+
     ]
     for (let rule of rules) {
         for(let reg of rule.regs){
