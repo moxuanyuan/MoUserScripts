@@ -58,7 +58,10 @@
         {
             // reddit
             regs:  [/^http(s)?:\/\/(\w+\.)?m.reddit\.com(\/\w+)?(\/)?/i],
-            remove:[]
+            remove:[
+                '.XPromoPill.m-slideIn',
+                '.xPromoAppStoreFooter'
+            ]
         } 
 
     ]
