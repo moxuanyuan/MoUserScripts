@@ -60,7 +60,8 @@
             regs:  [/^http(s)?:\/\/(\w+\.)?m.reddit\.com(\/\w+)?(\/)?/i],
             remove:[
                 '.XPromoPill.m-slideIn',
-                '.xPromoAppStoreFooter'
+                '.xPromoAppStoreFooter',
+                '.XpromoPopup.m-active'
             ]
         } 
 
