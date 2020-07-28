@@ -9,6 +9,7 @@
 // @match       *://*.toutiao.io/*
 // @match       *://*.m.smzdm.com/*
 // @match       *://m.xiachufang.com/* 
+// @match       *://*.reddit.com/*
 // ==/UserScript==
 /*jshint esversion: 6 */
 (function () {
@@ -52,6 +53,11 @@
         {
             // 下厨房
             regs:  [/^http(s)?:\/\/(\w+\.)?m.xiachufang\.com(\/\w+)?(\/)?/i],
+            remove:[]
+        },
+        {
+            // reddit
+            regs:  [/^http(s)?:\/\/(\w+\.)?m.reddit\.com(\/\w+)?(\/)?/i],
             remove:[]
         } 
 
