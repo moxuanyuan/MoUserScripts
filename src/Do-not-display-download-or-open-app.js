@@ -2,7 +2,7 @@
 // @name        Do not show download or open app
 // @namespace   mozl.net
 // @grant       GM_addStyle
-// @version     0.3.2
+// @version     0.5.1
 // @author      Mozl
 // @description 移动版网页不显示下载或打开APP
 // @match       *://juejin.im/*
@@ -57,18 +57,20 @@
         },
         {
             // reddit
-            regs:  [/^http(s)?:\/\/(\w+\.)?m.reddit\.com(\/\w+)?(\/)?/i],
-            remove:[
-                '.XPromoPill.m-slideIn',
-                '.xPromoAppStoreFooter',
-                '.XpromoPopup.m-active'
-            ]
+            regs:  [/^http(s)?:\/\/(\w+\.)?reddit\.com(\/\w+)?(\/)?/i],
+            remove:['.XPromoPill.m-slideIn','.xPromoAppStoreFooter', '.XpromoPopup.m-active','.TopNav__promoButton'],
+            style:`
+                body.scroll-disabled{
+                    overflow:auto!important;
+                    position:static!important;
+                }
+            `
         } 
 
     ]
     for (let rule of rules) {
         for(let reg of rule.regs){
-            if (reg.test(window.location.href)) {
+            if (reg.test(window.location.href)) { 
                 GM_addStyle(
                   (rule.remove
                     ? rule.remove.join(',\n') +
