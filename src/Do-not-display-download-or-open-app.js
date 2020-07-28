@@ -8,7 +8,7 @@
 // @match       *://juejin.im/*
 // @match       *://*.toutiao.io/*
 // @match       *://*.m.smzdm.com/*
-// @match       *://m.xiachufang.com/*
+// @match       *://m.xiachufang.com/* 
 // ==/UserScript==
 /*jshint esversion: 6 */
 (function () {
@@ -32,7 +32,7 @@
             ]
         },
         {
-            // 开发者头条 - 移动端 
+            // 开发者头条
             regs: [
                 /^http(s)?:\/\/(\w+\.)?toutiao\.io(\/\w+)?(\/)?/i
             ],
@@ -41,7 +41,7 @@
             ]
         },
         {
-            // 什么值得买 - 移动端页面
+            // 什么值得买
             regs: [
                 /^http(s)?:\/\/(\w+\.)?m.smzdm\.com(\/\w+)?(\/)?/i
             ],
@@ -50,10 +50,10 @@
             ]
         },
         {
-            // 下厨房 - 移动端页面
+            // 下厨房
             regs:  [/^http(s)?:\/\/(\w+\.)?m.xiachufang\.com(\/\w+)?(\/)?/i],
             remove:[]
-        }
+        } 
 
     ]
     for (let rule of rules) {
